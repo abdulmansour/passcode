@@ -3,21 +3,28 @@
 using namespace std;
 
 int main() {
-    const int p1 = 1591;
-    const string p2 = "molate";
+    const int p1 = 1591123;
+    const string p2 = "molate123";
     int entry1;
     string entry2;
+    int size1 = 0;
     
     cout << "Please enter your digit-code: " << flush;
     cin >> entry1;
     
     if (p1 == entry1) {
-        cout << "Access Granted!" << endl;
-        int size1;
-        size1 = sizeof(entry1);
-        int * digit = new int[size1];
         
-        for (int i = size1 - 1; i >= 0; i--) {
+        cout << "Access Granted!" << endl;
+        
+        int temp = entry1;
+        do {
+            temp = temp/10;
+            size1++;
+        }while(temp !=0);
+        
+        int * digit = new int[sizeof(entry1)];
+        
+        for (int i = size1-1; i >= 0; i--) {
             digit[i] = entry1 % 10;
             entry1 = entry1 / 10;
         }
@@ -35,7 +42,7 @@ int main() {
             
             int size2 = 0;
             
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i >= 0 ; i++) {
                 if (p2[i] == '\0') {
                     break;
                 }
