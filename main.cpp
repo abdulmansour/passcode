@@ -8,6 +8,7 @@ int main() {
     int entry1;
     string entry2;
     int size1 = 0;
+    int size2 = 0;
     
     cout << "Please enter your digit-code: " << flush;
     cin >> entry1;
@@ -39,8 +40,6 @@ int main() {
         
         if (p2 == entry2) {
             cout << "Access granted!" << endl;
-            
-            int size2 = 0;
             
             for (int i = 0; i >= 0 ; i++) {
                 if (p2[i] == '\0') {
