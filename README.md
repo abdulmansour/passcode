@@ -1,2 +1,2 @@
 # passcode
-testing out control/conditional statements and dynamic memory allocation with int*/char*.
+testing out conditional/control statements and dynamic memory allocation (new operator) in a simple 2 layer passcode implementation.
